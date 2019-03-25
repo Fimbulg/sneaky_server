@@ -15,6 +15,9 @@ app.get('/', (req, res) => {
 app.get('/new', (req, res) => {
     res.send('New endpoint pulled down by docker to server\n');
 });
+app.get('/anotherNew', (req, res) => {
+    res.json({new: 'New endpoint pulled down by docker to server\n'});
+});
 app.post('/data', (req, res) => {
     console.log(req.body);
     posts.push(req.body);
