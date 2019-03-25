@@ -10,7 +10,7 @@ app.use(express.json());
 let posts = [];
 
 app.get('/', (req, res) => {
-    res.send('Helloror there world\n');
+    res.send('Hello there world\n');
 });
 app.post('/repoUpdate', (req, res) => {
     shell.exec('cd /home/fimbulg/Code/express/sneaky_server_compose_file && ' 
