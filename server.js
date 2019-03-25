@@ -18,7 +18,7 @@ app.post('/data', (req, res) => {
     res.send('Post length ' + posts.length + '\n');
 });
 app.get('/data', (req, res) => {
-    posts.length > 0 && posts.every(e => e !== {}) ? res.json(posts) : res.send('Nothing\n');
+    posts.length > 0 && posts.every(e => e !== {}) ? res.json(posts) : res.send('Nothingssss\n');
 });
 
 app.listen(PORT, HOST);
