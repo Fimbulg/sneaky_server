@@ -12,11 +12,6 @@ let posts = [];
 app.get('/', (req, res) => {
     res.send('Hello there world\n');
 });
-app.post('/repoUpdate', (req, res) => {
-    console.log('Updating repo...');
-    shell.cd('/home/fimbulg/Code/express/sneaky_server_compose_file');
-    shell.exec('docker-compose pull && docker-compose up --build');
-});
 app.post('/data', (req, res) => {
     console.log(req.body);
     posts.push(req.body);
