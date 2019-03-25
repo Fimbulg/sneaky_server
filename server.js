@@ -12,6 +12,9 @@ let posts = [];
 app.get('/', (req, res) => {
     res.send('Hello there world\n');
 });
+app.get('/new', (req, res) => {
+    res.send('New endpoint pulled down by docker to server\n');
+});
 app.post('/data', (req, res) => {
     console.log(req.body);
     posts.push(req.body);
