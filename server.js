@@ -14,8 +14,8 @@ app.get('/', (req, res) => {
 });
 app.post('/repoUpdate', (req, res) => {
     console.log('Updating repo...');
-    shell.exec('cd /home/fimbulg/Code/express/sneaky_server_compose_file && ' 
-    + 'docker-compose pull && docker-compose up --build');
+    shell.cd('/home/fimbulg/Code/express/sneaky_server_compose_file');
+    shell.exec('docker-compose pull && docker-compose up --build');
 });
 app.post('/data', (req, res) => {
     console.log(req.body);
