@@ -13,6 +13,7 @@ app.get('/', (req, res) => {
     res.send('Hello there world\n');
 });
 app.post('/repoUpdate', (req, res) => {
+    console.log('Updating repo...');
     shell.exec('cd /home/fimbulg/Code/express/sneaky_server_compose_file && ' 
     + 'docker-compose pull && docker-compose up --build');
 });
